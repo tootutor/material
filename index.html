@@ -21,18 +21,19 @@
       layout="column"
       md-theme="ttoDark"
     >
-      <md-toolbar class="md-tall">
+      <md-toolbar class="md-tall" flex>
+				<md-icon style="color:white; font-size:128px">account_circle</md-icon>
       </md-toolbar>
-      <md-content flex>
-        <md-list ng-controller="leftNavCtrl as leftNav" layout="column">
-          <md-item-list ng-repeat="menu in leftNav.menuList">
-            <md-button class="md-icon" flex>
-              <md-icon>{{menu.icon}}</md-icon>
-              {{menu.name}}
-            </md-button>
-          </md-item-list>
-        </md-list>
-      </md-content>
+			<md-content>
+				<md-list ng-controller="leftNavCtrl as leftNav" flex>
+					<md-item-list ng-repeat="menu in leftNav.menuList">
+						<md-button class="md-icon" style="width:95%; text-align:left; !important;">
+							<md-icon>{{menu.icon}}</md-icon>
+							{{menu.name}}
+						</md-button>
+					</md-item-list>
+				</md-list>
+			</md-content>
     </md-sidenav>
     
     <div layout="column" flex>
@@ -45,10 +46,34 @@
           <md-icon>comment</md-icon>
         </md-button>
       </md-toolbar>
-      <div layout="row">
-        <md-content flex> AAA </md-content>
-        <md-content flex> BBB </md-content>
-      </div>
+      <md-content ng-controller="pageCtrl as page">
+				<md-grid-list md-cols-gt-xs="6" md-gutter="3px" md-cols="3" md-row-height="5:4">
+					<md-grid-tile md-colspan="3" md-rowspan="3" ng-repeat="card in page.cardList">
+						<md-card flex>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Card with  image</span>
+									<span class="md-subhead">Extra Large</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content layout="row" layout-align="space-between">
+								<div class="md-media-xl card-media"></div>
+								<md-card-actions layout="column">
+									<md-button class="md-icon-button" aria-label="Favorite">
+										<md-icon>favorite</md-icon>
+									</md-button>
+									<md-button class="md-icon-button" aria-label="Settings">
+										<md-icon>menu</md-icon>
+									</md-button>
+									<md-button class="md-icon-button" aria-label="Share">
+										<md-icon>share</md-icon>
+									</md-button>
+								</md-card-actions>
+							</md-card-content>
+						</md-card>
+					</md-grid-tile>
+				</md-grid-list>
+      </md-content>
     </div>
 
     <md-sidenav
@@ -57,10 +82,20 @@
       md-disable-backdrop
       md-whiteframe="4"
       layout="column"
+			md-theme="ttoOrange"
     >
-      <md-toolbar>
+      <md-toolbar class="md-tall">
+				<md-icon style="color:white; font-size:128px">comment</md-icon>
       </md-toolbar>
-      <md-content flex></md-content>
+      <md-content flex>
+			</md-content>
+			<md-divider></md-divider>
+			<form layout="row" layout-align="start center">
+				<textarea flex style="border:0"></textarea>
+				<md-button class="md-icon-button">
+					<md-icon>comment</md-icon>
+				</md-button>
+			</form>
     </md-sidenav>
   
     <script src="bower_components/angular/angular.min.js"></script>
