@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/google-fonts/roboto.css">
+    <link rel="stylesheet" href="bower_components/material-icons/material-icons.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+  <body ng-app="app" ng-cloak layout="row">
+    <md-sidenav
+      class="md-sidenav-left"
+      md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-sm')"
+      md-disable-backdrop
+      md-whiteframe="4"
+      layout="column"
+      md-theme="ttoDark"
+    >
+      <md-toolbar class="md-tall">
+      </md-toolbar>
+      <md-content flex>
+        <md-list ng-controller="leftNavCtrl as leftNav" layout="column">
+          <md-item-list ng-repeat="menu in leftNav.menuList">
+            <md-button class="md-icon" flex>
+              <md-icon>{{menu.icon}}</md-icon>
+              {{menu.name}}
+            </md-button>
+          </md-item-list>
+        </md-list>
+      </md-content>
+    </md-sidenav>
+    
+    <div layout="column" flex>
+      <md-toolbar class="md-hue-2" layout="row" layout-align="center center" ng-controller="toolbarCtrl as vm">
+        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('left')" hide-gt-sm>
+          <md-icon>menu</md-icon>
+        </md-button>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('right')">
+          <md-icon>comment</md-icon>
+        </md-button>
+      </md-toolbar>
+      <div layout="row">
+        <md-content flex> AAA </md-content>
+        <md-content flex> BBB </md-content>
+      </div>
+    </div>
+
+    <md-sidenav
+      class="md-sidenav-right"
+      md-component-id="right"
+      md-disable-backdrop
+      md-whiteframe="4"
+      layout="column"
+    >
+      <md-toolbar>
+      </md-toolbar>
+      <md-content flex></md-content>
+    </md-sidenav>
+  
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
