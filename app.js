@@ -39,7 +39,7 @@ ttoApp.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('ttoDark')
     .primaryPalette('black')
     .accentPalette('blue')
-    .warnPalette('deep-orange');
+    .warnPalette('deep-orange')
     .dark();
 
 	$mdThemingProvider.theme('ttoOrange')
