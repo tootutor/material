@@ -20,6 +20,7 @@
       md-whiteframe="4"
       layout="column"
       md-theme="ttoDark"
+      width="250px"
     >
       <md-toolbar class="md-tall" flex>
 				<md-icon style="color:white; font-size:128px">account_circle</md-icon>
@@ -34,6 +35,16 @@
 					</md-item-list>
 				</md-list>
 			</md-content>
+			<md-content>
+        <md-list>
+          <md-item-list>
+            <md-button class="md-icon" style="width:95%; text-align:left; !important;">
+              <md-icon>person_add</md-icon>
+              Register
+            </md-button>
+          </md-item-list>
+        </md-list>
+      </md-content>
     </md-sidenav>
     
     <div layout="column" flex>
@@ -50,24 +61,50 @@
         </md-button>
       </md-toolbar>
       <md-content ng-controller="pageCtrl as page">
-        <md-grid-list 
-          md-cols-gt-md="2" md-cols-md="1" md-cols-sm="1" md-cols-xs="1" 
-          md-gutter="8px" 
-          md-row-height="5:3"
-        >
-          <md-grid-tile 
-            md-colspan="2" md-colspan-md="1" md-colspan-xs="1"
-            md-rowspan="2" md-rowspan-md="1" md-rowspan-xs="1" 
-            class="red"
-          >
-            <md-grid-tile-footer>
-              <h3>Tile default</h3>
-            </md-grid-tile-footer>
+        <md-grid-list md-cols="2" md-gutter="8px" md-row-height="3:2">
+          <md-grid-tile md-colspan="2" md-rowspan="2" class="red">
+            <md-grid-tile-header>
+              <md-button class="md-icon-button">
+                <md-icon>favorite</md-icon>
+              </md-button>
+              <md-button class="md-icon-button">
+                <md-icon>share</md-icon>
+              </md-button>
+            </md-grid-tile-header>
+            <div class="frame" layout="row" layout-align="center center" flex>
+              <div class="frame" flex="50" layout-align="center center">
+                <img src="assets/favorite5.png" style="width:75%">
+              </div>
+              <div clasee="frame" flex="50" layout-align="center center">
+                <h4>ฟิสิกส์ - เสียง</h4>
+                <br>
+                                          เรียนรู้เกี่ยวกับเรื่องของเสียง การคำนวณ การนำไปใช้ ... (เพิ่มเติม)
+              </div>
+            </div>
           </md-grid-tile>
-          <md-grid-tile class="green" ng-repeat="card in page.cardList">
-            <md-grid-tile-footer>
-              <h3>Tile</h3>
-            </md-grid-tile-footer>
+          <md-grid-tile 
+            md-colspan="1" md-colspan-md="2" md-colspan-xs="2" 
+            md-rowspan="1" md-rowspan-md="2" md-rowspan-xs="2" 
+            class="green" ng-repeat="card in page.cardList"
+          >
+            <md-grid-tile-header>
+              <md-button class="md-icon-button">
+                <md-icon>favorite</md-icon>
+              </md-button>
+              <md-button class="md-icon-button">
+                <md-icon>share</md-icon>
+              </md-button>
+            </md-grid-tile-header>
+            <div class="frame" layout="row" layout-align="center center" flex>
+              <div class="frame" flex="50" layout-align="center center">
+                <img src="assets/favorite5.png" style="width:75%">
+              </div>
+              <div clasee="frame" flex="50" layout-align="center center">
+                <h4>ฟิสิกส์ - เสียง</h4>
+                <br>
+                                          เรียนรู้เกี่ยวกับเรื่องของเสียง การคำนวณ การนำไปใช้ ... (เพิ่มเติม)
+              </div>
+            </div>
           </md-grid-tile>
          </md-grid-list>
       </md-content>
@@ -103,6 +140,51 @@
 				<md-icon style="color:white; font-size:128px">comment</md-icon>
       </md-toolbar>
       <md-content flex>
+        <div layout="row" class="md-padding">
+          <img class="avatar-left" src="assets/person.jpg">
+          <div class="bubble-left" flex>
+            <div>
+              <small>Quickly come to the meeting room 1B, we have a big server issue</small>
+            </div>
+            <div class="time secondary-text">12 mins. ago</div>            
+          </div>
+        </div>
+        <div layout="row" class="message-user md-padding">
+          <img class="avatar-right" src="assets/profile.jpg">
+          <div class="bubble-right" flex>
+            <div>
+              <small>I’m having breakfast right now, can’t you wait for 10 minutes?</small>
+            </div>
+            <div class="time secondary-text">12 mins. ago</div>            
+          </div>
+        </div>
+        <div layout="row" class="md-padding">
+          <img class="avatar-left" src="assets/person.jpg">
+          <div class="bubble-left" flex>
+            <div>
+              <small>Quickly come to the meeting room 1B, we have a big server issue</small>
+            </div>
+            <div class="time secondary-text">12 mins. ago</div>            
+          </div>
+        </div>
+        <div layout="row" class="md-padding">
+          <img class="avatar-left" src="assets/person.jpg">
+          <div class="bubble-left" flex>
+            <div>
+              <small>Quickly come to the meeting room 1B, we have a big server issue</small>
+            </div>
+            <div class="time secondary-text">12 mins. ago</div>            
+          </div>
+        </div>
+        <div layout="row" class="message-user md-padding">
+          <img class="avatar-right" src="assets/profile.jpg">
+          <div class="bubble-right" flex>
+            <div>
+              <small>I’m having breakfast right now, can’t you wait for 10 minutes?</small>
+            </div>
+            <div class="time secondary-text">12 mins. ago</div>            
+          </div>
+        </div>
 			</md-content>
 			<md-divider></md-divider>
 			<form layout="row" layout-align="start center">
@@ -118,7 +200,7 @@
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="bower_components/angular-new-router/router.es5.min.js"></script>
+    <script src="bower_components/angular-new-router/dist/router.es5.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

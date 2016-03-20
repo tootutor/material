@@ -75,11 +75,11 @@ ttoApp.controller('pageCtrl', [function() {
 ttoApp.controller('leftNavCtrl', function() {
   var vm = this;
   vm.menuList = [
-    {icon: 'phone', name: 'Phone'},
-    {icon: 'phone', name: 'Phone'},
-    {icon: 'phone', name: 'Phone'},
-    {icon: 'phone', name: 'Phone'},
-    {icon: 'phone', name: 'Phone'},
-    {icon: 'phone', name: 'Phone'}
+    {icon: 'filter_1', name: ' - Item 001'},
+    {icon: 'filter_2', name: ' - Item 002'},
+    {icon: 'filter_3', name: ' - Item 003'},
+    {icon: 'filter_4', name: ' - Item 004'},
+    {icon: 'filter_5', name: ' - Item 005'},
+    {icon: 'filter_6', name: ' - Item 006'}
   ];
 });
