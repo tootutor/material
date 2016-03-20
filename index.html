@@ -15,7 +15,7 @@
     <md-sidenav
       class="md-sidenav-left"
       md-component-id="left"
-      md-is-locked-open="$mdMedia('gt-sm')"
+      md-is-locked-open="$mdMedia('gt-xs')"
       md-disable-backdrop
       md-whiteframe="4"
       layout="column"
@@ -38,47 +38,54 @@
     
     <div layout="column" flex>
       <md-toolbar class="md-hue-2" layout="row" layout-align="center center" ng-controller="toolbarCtrl as vm">
-        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('left')" hide-gt-sm>
+        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('left')" hide-gt-xs>
           <md-icon>menu</md-icon>
         </md-button>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('right')">
+        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('comment')">
           <md-icon>comment</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('right')" hide-gt-md>
+          <md-icon>settings</md-icon>
         </md-button>
       </md-toolbar>
       <md-content ng-controller="pageCtrl as page">
-				<md-grid-list md-cols-gt-xs="6" md-gutter="3px" md-cols="3" md-row-height="5:4">
-					<md-grid-tile md-colspan="3" md-rowspan="3" ng-repeat="card in page.cardList">
-						<md-card flex>
-							<md-card-title>
-								<md-card-title-text>
-									<span class="md-headline">Card with  image</span>
-									<span class="md-subhead">Extra Large</span>
-								</md-card-title-text>
-							</md-card-title>
-							<md-card-content layout="row" layout-align="space-between">
-								<div class="md-media-xl card-media"></div>
-								<md-card-actions layout="column">
-									<md-button class="md-icon-button" aria-label="Favorite">
-										<md-icon>favorite</md-icon>
-									</md-button>
-									<md-button class="md-icon-button" aria-label="Settings">
-										<md-icon>menu</md-icon>
-									</md-button>
-									<md-button class="md-icon-button" aria-label="Share">
-										<md-icon>share</md-icon>
-									</md-button>
-								</md-card-actions>
-							</md-card-content>
-						</md-card>
-					</md-grid-tile>
-				</md-grid-list>
+        <md-grid-list md-cols-gt-md="3" md-cols-md="3" md-cols-sm="2" md-cols-xs="1" md-gutter="8px" md-row-height="5:3">
+          <md-grid-tile md-colspan="2" md-colspan-xs="1" md-rowspan="2" md-rowspan-xs="1" class="red">
+            <md-grid-tile-footer>
+              <h3>Tile default</h3>
+            </md-grid-tile-footer>
+          </md-grid-tile>
+          <md-grid-tile class="green" ng-repeat="card in page.cardList">
+            <md-grid-tile-footer>
+              <h3>Tile</h3>
+            </md-grid-tile-footer>
+          </md-grid-tile>
+         </md-grid-list>
       </md-content>
+      <md-button class="md-fab md-fab-bottom-right">
+        <md-icon>send</md-icon>
+      </md-button>
     </div>
 
     <md-sidenav
       class="md-sidenav-right"
       md-component-id="right"
+      md-is-locked-open="$mdMedia('gt-md')"
+      md-disable-backdrop
+      md-whiteframe="4"
+      layout="column"
+    >
+      <md-toolbar class="md-tall">
+				<md-icon style="color:white; font-size:128px">settings</md-icon>
+      </md-toolbar>
+      <md-content flex>
+			</md-content>
+    </md-sidenav>
+  
+    <md-sidenav
+      class="md-sidenav-right"
+      md-component-id="comment"
       md-disable-backdrop
       md-whiteframe="4"
       layout="column"
@@ -97,12 +104,13 @@
 				</md-button>
 			</form>
     </md-sidenav>
-  
+    
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-new-router/router.es5.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

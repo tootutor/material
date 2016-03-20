@@ -62,7 +62,13 @@ ttoApp.controller('pageCtrl', [function() {
 		{title: 'Title 002', name: 'Name 002'},
 		{title: 'Title 003', name: 'Name 003'},
 		{title: 'Title 004', name: 'Name 004'},
-		{title: 'Title 005', name: 'Name 005'}
+		{title: 'Title 005', name: 'Name 005'},
+		{title: 'Title 006', name: 'Name 006'},
+		{title: 'Title 007', name: 'Name 007'},
+		{title: 'Title 008', name: 'Name 008'},
+		{title: 'Title 009', name: 'Name 009'},
+		{title: 'Title 010', name: 'Name 010'},
+		{title: 'Title 011', name: 'Name 011'},
 	];
 }]);
 
