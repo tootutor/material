@@ -50,8 +50,16 @@
         </md-button>
       </md-toolbar>
       <md-content ng-controller="pageCtrl as page">
-        <md-grid-list md-cols-gt-md="3" md-cols-md="3" md-cols-sm="2" md-cols-xs="1" md-gutter="8px" md-row-height="5:3">
-          <md-grid-tile md-colspan="2" md-colspan-xs="1" md-rowspan="2" md-rowspan-xs="1" class="red">
+        <md-grid-list 
+          md-cols-gt-md="2" md-cols-md="1" md-cols-sm="1" md-cols-xs="1" 
+          md-gutter="8px" 
+          md-row-height="5:3"
+        >
+          <md-grid-tile 
+            md-colspan="2" md-colspan-md="1" md-colspan-xs="1"
+            md-rowspan="2" md-rowspan-md="1" md-rowspan-xs="1" 
+            class="red"
+          >
             <md-grid-tile-footer>
               <h3>Tile default</h3>
             </md-grid-tile-footer>
