@@ -128,3 +128,45 @@ md-grid-list {
   -webkit-box-align: end;
   align-items: flex-end;
 }
+
+.streamline {
+  margin-bottom: 16px;
+  border-color: #000000;
+  border-left: 1px solid #000000;
+  position: relative;        
+}
+
+.sl-item {
+  position: relative;
+  padding-bottom: 1px;
+  border-color: #000000;
+}
+.sl-item:before {
+  display: table;
+  content: " ";
+}
+
+.sl-item:after {
+  display: table;
+  content: " ";
+  top: 0;
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  margin-left: -8px;
+  background-color: #00f;
+  border-color: green;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  content: '';
+}
+
+.sl-content {
+  padding-bottom: 10px;
+  margin-top: -1px;
+  margin-left: 24px;
+}
