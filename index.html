@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bower_components/google-fonts/roboto.css">
     <link rel="stylesheet" href="bower_components/material-icons/material-icons.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css">
     <link rel="stylesheet" href="app.css">
 
   </head>
@@ -128,6 +129,8 @@
       <md-toolbar class="md-tall">
 				<md-icon style="color:white; font-size:128px">settings</md-icon>
       </md-toolbar>
+      <md-content ng-controller="timelineCtrl as vmTimeline" flex>
+      <!--
       <md-content class="card-body" flex>
         <div class="streamline">
           <div class="sl-item">
@@ -155,6 +158,20 @@
             </div>
           </div>
         </div> 
+      -->
+        <timeline>
+          <timeline-event ng-repeat="event in vmTimeline.events" side="right">
+            <timeline-badge class="{{event.badgeClass}}">
+              <md-icon>send</md-icon>
+            </timeline-badge>
+            <timeline-panel class="{{event.badgeClass}}">
+              <timeline-heading>
+                <h4>{{event.title}}</h4>
+              </timeline-heading>
+              <p>{{event.content}}</p>
+            </timeline-panel>
+          </timeline-event>
+        </timeline>        
 			</md-content>
     </md-sidenav>
   
@@ -230,7 +247,9 @@
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="bower_components/angular-new-router/dist/router.es5.min.js"></script>
+    <script src="bower_components/angular-new-router/router.es5.min.js"></script>
+    <script src="bower_components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
+    <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
