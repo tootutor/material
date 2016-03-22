@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="bower_components/material-icons/material-icons.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css">
+    <link rel="stylesheet" href="bower_components/progress-wizard/progress-wizard.min.css">
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="app.css">
 
   </head>
@@ -54,7 +56,7 @@
           <md-icon>menu</md-icon>
         </md-button>
         <span flex></span>
-        <md-button class="md-icon-button">
+        <md-button class="md-fab md-mini">
           <md-icon>person</md-icon>
           <span class="notifications-label ng-scope">7</span>
         </md-button>
@@ -129,50 +131,72 @@
       <md-toolbar class="md-tall">
 				<md-icon style="color:white; font-size:128px">settings</md-icon>
       </md-toolbar>
-      <md-content ng-controller="timelineCtrl as vmTimeline" flex>
-      <!--
-      <md-content class="card-body" flex>
-        <div class="streamline">
-          <div class="sl-item">
-            <div class="sl-content">
-              <div>Title</div>
-              <small>ABCDEF GHIJKL</small><br>
-              <small>ABCDEF GHIJKL</small><br>
-              <small>ABCDEF GHIJKL</small><br>
-              <small>ABCDEF GHIJKL</small><br>
-              <small>ABCDEF GHIJKL</small><br>
-            </div>
-          </div>
-          <div class="sl-item">
-            <div class="sl-content">
-              <div>Title</div>
-              <small>ABCDEF GHIJKL</small><br>
-              <small>ABCDEF GHIJKL</small><br>
-              <small>ABCDEF GHIJKL</small><br>
-            </div>
-          </div>
-          <div class="sl-item">
-            <div class="sl-content">
-              <div>Title</div>
-              <small>ABCDEF GHIJKL</small><br>
-            </div>
-          </div>
-        </div> 
-      -->
-        <timeline>
-          <timeline-event ng-repeat="event in vmTimeline.events" side="right">
-            <timeline-badge class="{{event.badgeClass}}">
-              <md-icon>send</md-icon>
-            </timeline-badge>
-            <timeline-panel class="{{event.badgeClass}}">
-              <timeline-heading>
-                <h4>{{event.title}}</h4>
-              </timeline-heading>
-              <p>{{event.content}}</p>
-            </timeline-panel>
-          </timeline-event>
-        </timeline>        
-			</md-content>
+      <md-content class="md-padding" flex>
+        <div class="md-padding">
+          <ul class="progress-indicator nocenter stacked">
+            <li class="completed info">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <span class="stacked-text">
+                ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+              </span>
+            </li>
+          </ul>
+        </div>
+ 		</md-content>
     </md-sidenav>
   
     <md-sidenav
