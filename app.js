@@ -1,4 +1,4 @@
-var ttoApp = angular.module('app', ['ngMaterial']);
+var ttoApp = angular.module('app', ['ngMaterial', 'angular-timeline']);
 
 ttoApp.config(function($mdThemingProvider) {
 
@@ -83,3 +83,18 @@ ttoApp.controller('leftNavCtrl', function() {
     {icon: 'filter_6', name: ' - Item 006'}
   ];
 });
+
+ttoApp.controller('timelineCtrl', [function() {
+  var vm = this;
+  vm.events = [{
+    badgeClass: 'info',
+    badgeIconClass: 'glyphicon-check',
+    title: 'First heading',
+    content: 'Some awesome content.'
+  }, {
+    badgeClass: 'warning',
+    badgeIconClass: 'glyphicon-credit-card',
+    title: 'Second heading',
+    content: 'More awesome content.'
+  }];
+}]);
