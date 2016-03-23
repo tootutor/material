@@ -175,23 +175,10 @@ md-grid-list {
   padding: 20px 24px;
 }
 
-.notifications-label {
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  font-size: 12px;
-  top: 2px;
-  right: 2px;
-  background-color: #E75753;
-}
-
-.badge1 {
+.badge {
    position:relative;
 }
-.badge1[data-badge]:after {
+.badge[data-badge]:after {
    content:attr(data-badge);
    position:absolute;
    top:0px;

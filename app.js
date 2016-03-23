@@ -1,6 +1,6 @@
-var ttoApp = angular.module('app', ['ngMaterial', 'angular-timeline']);
+var ttoApp = angular.module('app', ['ngMaterial', 'angular-timeline', 'ngRoute']);
 
-ttoApp.config(function($mdThemingProvider) {
+ttoApp.config(function($mdThemingProvider, $routeProvider) {
 
   $mdThemingProvider.definePalette('black', {
     '50': '000000',
@@ -46,6 +46,11 @@ ttoApp.config(function($mdThemingProvider) {
     .primaryPalette('deep-orange')
     .accentPalette('teal')
     .warnPalette('orange');
+
+  $routeProvider
+    .when('/', {templateUrl: 'pages/dashboard/dashboard.html'})
+    .when('/dashboard', {templateUrl: 'pages/dashboard/dashboard.html'})
+    .otherwise({redirectTo: '/'});
 });
 
 ttoApp.controller('toolbarCtrl', ['$mdSidenav', function($mdSidenav) {

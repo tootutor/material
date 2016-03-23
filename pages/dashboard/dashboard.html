@@ -1,0 +1,255 @@
+<md-sidenav
+  class="md-sidenav-left"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-xs')"
+  md-disable-backdrop
+  md-whiteframe="4"
+  layout="column"
+  md-theme="ttoDark"
+  width="250px"
+>
+  <md-toolbar class="md-tall" flex>
+    <md-icon style="color:white; font-size:128px">account_circle</md-icon>
+  </md-toolbar>
+  <md-content flex>
+    <md-list ng-controller="leftNavCtrl as leftNav" flex>
+      <md-item-list ng-repeat="menu in leftNav.menuList">
+        <md-button class="md-icon" style="width:95%; text-align:left; !important;">
+          <md-icon>{{menu.icon}}</md-icon>
+          {{menu.name}}
+        </md-button>
+      </md-item-list>
+    </md-list>
+  </md-content>
+  <md-content>
+    <md-list>
+      <md-item-list>
+        <md-button class="md-icon" style="width:95%; text-align:left; !important;">
+          <md-icon>person_add</md-icon>
+          Register
+        </md-button>
+      </md-item-list>
+    </md-list>
+  </md-content>
+</md-sidenav>
+
+<div layout="column" flex>
+  <md-toolbar class="md-hue-2" layout="row" layout-align="center center" ng-controller="toolbarCtrl as vm">
+    <md-button class="md-icon-button" ng-click="vm.toggleSidenav('left')" hide-gt-xs>
+      <md-icon>menu</md-icon>
+    </md-button>
+    <span flex></span>
+    <div class="badge" data-badge="{{1+7}}">
+      <md-button class="md-icon-button">
+        <md-icon>person</md-icon>
+      </md-button>
+    </div>
+    <div class="badge" data-badge="{{'9+'}}">
+      <md-button class="md-icon-button" ng-click="vm.toggleSidenav('comment')">
+        <md-icon>comment</md-icon>
+      </md-button>
+    </div>
+    <div class="badge" data-badge="{{'9+'}}">
+      <md-button class="md-icon-button" ng-click="vm.toggleSidenav('right')" hide-gt-md>
+        <md-icon>settings</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-content ng-controller="pageCtrl as page">
+    <md-grid-list md-cols="2" md-gutter="8px" md-row-height="3:2">
+      <md-grid-tile md-colspan="2" md-rowspan="2" class="red">
+        <md-grid-tile-header>
+          <md-button class="md-icon-button">
+            <md-icon>favorite</md-icon>
+          </md-button>
+          <md-button class="md-icon-button">
+            <md-icon>share</md-icon>
+          </md-button>
+        </md-grid-tile-header>
+        <div class="frame" layout="row" layout-align="center center" flex>
+          <div class="frame" flex="50" layout-align="center center">
+            <img src="assets/favorite5.png" style="width:75%">
+          </div>
+          <div clasee="frame" flex="50" layout-align="center center">
+            <h4>ฟิสิกส์ - เสียง</h4>
+            <br>
+                                      เรียนรู้เกี่ยวกับเรื่องของเสียง การคำนวณ การนำไปใช้ ... (เพิ่มเติม)
+          </div>
+        </div>
+      </md-grid-tile>
+      <md-grid-tile 
+        md-colspan="1" md-colspan-md="2" md-colspan-xs="2" 
+        md-rowspan="1" md-rowspan-md="2" md-rowspan-xs="2" 
+        class="green" ng-repeat="card in page.cardList"
+      >
+        <md-grid-tile-header>
+          <md-button class="md-icon-button">
+            <md-icon>favorite</md-icon>
+          </md-button>
+          <md-button class="md-icon-button">
+            <md-icon>share</md-icon>
+          </md-button>
+        </md-grid-tile-header>
+        <div class="frame" layout="row" layout-align="center center" flex>
+          <div class="frame" flex="50" layout-align="center center">
+            <img src="assets/favorite5.png" style="width:75%">
+          </div>
+          <div clasee="frame" flex="50" layout-align="center center">
+            <h4>ฟิสิกส์ - เสียง</h4>
+            <br>
+                                      เรียนรู้เกี่ยวกับเรื่องของเสียง การคำนวณ การนำไปใช้ ... (เพิ่มเติม)
+          </div>
+        </div>
+      </md-grid-tile>
+     </md-grid-list>
+  </md-content>
+  <md-button class="md-fab md-fab-bottom-right">
+    <md-icon>send</md-icon>
+  </md-button>
+</div>
+
+<md-sidenav
+  class="md-sidenav-right"
+  md-component-id="right"
+  md-is-locked-open="$mdMedia('gt-md')"
+  md-disable-backdrop
+  md-whiteframe="4"
+  layout="column"
+>
+  <md-toolbar class="md-tall">
+    <md-icon style="color:white; font-size:128px">settings</md-icon>
+  </md-toolbar>
+  <md-content class="md-padding" flex>
+    <div class="md-padding">
+      <ul class="progress-indicator nocenter stacked">
+        <li class="completed info">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+        <li class="completed">
+          <span class="bubble"></span>
+          <span class="stacked-text">
+            ฟหดฟกหเงวส่ๆวำนีไำเวสา่กอวหส่ดงซศ๋ฌวไำส่
+          </span>
+        </li>
+      </ul>
+    </div>
+</md-content>
+</md-sidenav>
+
+<md-sidenav
+  class="md-sidenav-right"
+  md-component-id="comment"
+  md-disable-backdrop
+  md-whiteframe="4"
+  layout="column"
+  md-theme="ttoOrange"
+>
+  <md-toolbar class="md-tall">
+    <md-icon style="color:white; font-size:128px">comment</md-icon>
+  </md-toolbar>
+  <md-content flex>
+    <div layout="row" class="md-padding">
+      <img class="avatar-left" src="assets/person.jpg">
+      <div class="bubble-left" flex>
+        <div>
+          <small>Quickly come to the meeting room 1B, we have a big server issue</small>
+        </div>
+        <div class="time secondary-text">12 mins. ago</div>            
+      </div>
+    </div>
+    <div layout="row" class="message-user md-padding">
+      <img class="avatar-right" src="assets/profile.jpg">
+      <div class="bubble-right" flex>
+        <div>
+          <small>I’m having breakfast right now, can’t you wait for 10 minutes?</small>
+        </div>
+        <div class="time secondary-text">12 mins. ago</div>            
+      </div>
+    </div>
+    <div layout="row" class="md-padding">
+      <img class="avatar-left" src="assets/person.jpg">
+      <div class="bubble-left" flex>
+        <div>
+          <small>Quickly come to the meeting room 1B, we have a big server issue</small>
+        </div>
+        <div class="time secondary-text">12 mins. ago</div>            
+      </div>
+    </div>
+    <div layout="row" class="md-padding">
+      <img class="avatar-left" src="assets/person.jpg">
+      <div class="bubble-left" flex>
+        <div>
+          <small>Quickly come to the meeting room 1B, we have a big server issue</small>
+        </div>
+        <div class="time secondary-text">12 mins. ago</div>            
+      </div>
+    </div>
+    <div layout="row" class="message-user md-padding">
+      <img class="avatar-right" src="assets/profile.jpg">
+      <div class="bubble-right" flex>
+        <div>
+          <small>I’m having breakfast right now, can’t you wait for 10 minutes?</small>
+        </div>
+        <div class="time secondary-text">12 mins. ago</div>            
+      </div>
+    </div>
+  </md-content>
+  <md-divider></md-divider>
+  <form layout="row" layout-align="start center">
+    <textarea flex style="border:0"></textarea>
+    <md-button class="md-icon-button">
+      <md-icon>comment</md-icon>
+    </md-button>
+  </form>
+</md-sidenav>
