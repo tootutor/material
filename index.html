@@ -56,15 +56,21 @@
           <md-icon>menu</md-icon>
         </md-button>
         <span flex></span>
-        <md-button class="md-icon-button">
-          <md-icon class="badge1" data-badge="?">person</md-icon>
-        </md-button>
-        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('comment')">
-          <md-icon class="badge1" data-badge="?">comment</md-icon>
-        </md-button>
-        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('right')" hide-gt-md>
-          <md-icon class="badge1" data-badge="?">settings</md-icon>
-        </md-button>
+        <div class="badge1" data-badge="9">
+          <md-button class="md-icon-button">
+            <md-icon>person</md-icon>
+          </md-button>
+        </div>
+        <div class="badge1" data-badge="9+">
+          <md-button class="md-icon-button" ng-click="vm.toggleSidenav('comment')">
+            <md-icon>comment</md-icon>
+          </md-button>
+        </div>
+        <div class="badge1" data-badge="9+">
+          <md-button class="md-icon-button" ng-click="vm.toggleSidenav('right')" hide-gt-md>
+            <md-icon>settings</md-icon>
+          </md-button>
+        </div>
       </md-toolbar>
       <md-content ng-controller="pageCtrl as page">
         <md-grid-list md-cols="2" md-gutter="8px" md-row-height="3:2">
