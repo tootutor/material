@@ -15,6 +15,23 @@
 
   </head>
   <body ng-app="app" ng-cloak layout="row">
+    <md-button class="md-fab md-fab-top-right">
+      <md-icon>send</md-icon>
+    </md-button>
+    <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-right">
+      <md-fab-trigger>
+        <md-button class="md-fab" aria-label="Add..."><md-icon>add</md-icon></md-button>
+      </md-fab-trigger>
+      <md-fab-actions>
+        <md-button class="md-fab md-raised md-mini" aria-label="Add User">
+          <md-icon>user</md-icon>
+        </md-button>
+        <md-button class="md-fab md-raised md-mini" aria-label="Add Group">
+          <md-icon>groups</md-icon>
+        </md-button>
+      </md-fab-actions>
+    </md-fab-speed-dial>    
+  
     <md-sidenav
       class="md-sidenav-left"
       md-component-id="left"
@@ -70,53 +87,13 @@
           <md-icon>settings</md-icon>
         </md-button>
       </md-toolbar>
-      <md-content ng-controller="pageCtrl as page">
-        <md-grid-list md-cols="2" md-gutter="8px" md-row-height="3:2">
-          <md-grid-tile md-colspan="2" md-rowspan="2" class="red">
-            <md-grid-tile-header>
-              <md-button class="md-icon-button">
-                <md-icon>favorite</md-icon>
-              </md-button>
-              <md-button class="md-icon-button">
-                <md-icon>share</md-icon>
-              </md-button>
-            </md-grid-tile-header>
-            <div class="video-container" flex>
-              <!-- Copy & Pasted from YouTube -->
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/y86U5AnvQow?list=PLV5w5gckjyBoFedgx8M5yTWB8kAutAIH5" frameborder="0" allowfullscreen></iframe>
-            </div>            
-          </md-grid-tile>
-          <md-grid-tile 
-            md-colspan="1" md-colspan-md="1" md-colspan-sm="2" md-colspan-xs="2" 
-            md-rowspan="1" md-rowspan-md="1" md-rowspan-sm="2" md-rowspan-xs="2" 
-            class="green" ng-repeat="card in page.cardList"
-          >
-            <md-grid-tile-header>
-              <md-button class="md-icon-button">
-                <md-icon>favorite</md-icon>
-              </md-button>
-              <md-button class="md-icon-button">
-                <md-icon>share</md-icon>
-              </md-button>
-            </md-grid-tile-header>
-            <div class="frame" layout="row" layout-align="center center" flex>
-              <div class="frame" flex="50" layout-align="center center">
-                <img src="assets/favorite5.png" style="width:75%">
-              </div>
-              <div clasee="frame" flex="50" layout-align="center center">
-                <h4>ฟิสิกส์ - เสียง</h4>
-                <br>
-                                          เรียนรู้เกี่ยวกับเรื่องของเสียง การคำนวณ การนำไปใช้ ... (เพิ่มเติม)
-              </div>
-            </div>
-          </md-grid-tile>
-         </md-grid-list>
+      <md-content>
+        <ui-view>
+          <ng-view></ng-view>
+        </ui-view>
       </md-content>
-      <md-button class="md-fab md-fab-bottom-right">
-        <md-icon>send</md-icon>
-      </md-button>
     </div>
-
+      
     <md-sidenav
       class="md-sidenav-right"
       md-component-id="right"
