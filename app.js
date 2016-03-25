@@ -1,4 +1,4 @@
-var ttoApp = angular.module('app', ['ngMaterial', 'ngRoute']);
+var ttoApp = angular.module('app', ['ngMaterial', 'ngRoute', 'nvd3']);
 
 ttoApp.config(function($mdThemingProvider, $routeProvider) {
 
@@ -50,6 +50,7 @@ ttoApp.config(function($mdThemingProvider, $routeProvider) {
   $routeProvider
     .when('/', {templateUrl: 'pages/dashboard/dashboard.html'})
     .when('/dashboard', {templateUrl: 'pages/dashboard/dashboard.html'})
+    .when('/course', {templateUrl: 'pages/course/course.html'})
     .otherwise({redirectTo: '/'});
 });
 
