@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 /* Test comment */
 var ttoApp = angular.module('app', ['ngMaterial', 'ngRoute']);
+=======
+var ttoApp = angular.module('app', ['ngMaterial', 'ngRoute', 'nvd3']);
+>>>>>>> 11981f5bbe35cbbe3be661dc23d4692f1760e503
 
 ttoApp.config(function($mdThemingProvider, $routeProvider) {
 
@@ -51,6 +55,7 @@ ttoApp.config(function($mdThemingProvider, $routeProvider) {
   $routeProvider
     .when('/', {templateUrl: 'pages/dashboard/dashboard.html'})
     .when('/dashboard', {templateUrl: 'pages/dashboard/dashboard.html'})
+    .when('/course', {templateUrl: 'pages/course/course.html'})
     .otherwise({redirectTo: '/'});
 });
 
