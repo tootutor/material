@@ -1,3 +1,4 @@
+/* Test comment */
 var ttoApp = angular.module('app', ['ngMaterial', 'ngRoute']);
 
 ttoApp.config(function($mdThemingProvider, $routeProvider) {
