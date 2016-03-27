@@ -1,0 +1,23 @@
+<md-toolbar class="md-tall">
+  <md-icon style="color:white; font-size:128px">account_circle</md-icon>
+</md-toolbar>
+<md-content flex>
+  <md-list ng-controller="leftNavCtrl as leftNav" flex>
+    <md-item-list ng-repeat="menu in leftNav.menuList">
+      <md-button class="md-icon" style="width:95%; text-align:left; !important;">
+        <md-icon>{{menu.icon}}</md-icon>
+        {{menu.name}}
+      </md-button>
+    </md-item-list>
+  </md-list>
+</md-content>
+<md-content>
+  <md-list>
+    <md-item-list>
+      <md-button class="md-icon" style="width:95%; text-align:left; !important;">
+        <md-icon>person_add</md-icon>
+        Register
+      </md-button>
+    </md-item-list>
+  </md-list>
+</md-content>
